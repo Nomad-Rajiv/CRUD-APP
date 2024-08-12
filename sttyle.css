@@ -1,0 +1,247 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  width: 100%;
+  padding: 10px 30px;
+  background-color: #EE534F;
+}
+
+.header h5{
+  font-weight: bold;
+  font-family: Verdana;
+  font-size: 28px;
+  color: #fff;
+}
+
+.uppper-btn-box{
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  padding: 30px;
+}
+
+.left-box{
+  width: 50%;
+  height: 100%;
+  
+}
+
+.uppper-btn-box .left-box button{
+  border: none;
+  outline: none;
+  background-color: #4286F5;
+  padding: 13px;
+  font-size: 16pxpx;
+  font-family: Verdana;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.right-box{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  /* gap: 10px; */
+}
+
+.right-box i{
+  font-size: 25px;
+  color: #4286F5;
+  padding: 13px;
+}
+.right-box input{
+  width: 75%;
+  padding: 13px;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #4286F5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold
+}
+
+.right-box button{
+  
+  border: none;
+  outline: none;
+  background-color: #EE534F;
+  padding: 13px;
+  font-size: 16pxpx;
+  font-family: Verdana;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+
+.table-box{
+  width: 100%;
+  padding: 30px;
+}
+
+.table-box table{
+  width: 100%;
+  
+}
+
+.table-box table tr th{
+  
+  border-right: 1px solid #ccc;
+  padding: 30px 0px 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-box table tr td{
+  border-right: 1px solid #ccc;
+  padding: 10px 0px 10px;
+  text-align: center;
+  font-family: verdana;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-box table tr td button{
+  width: 40%;
+  border: none;
+  outline: none;
+  background-color: #4286F5;
+  font-size: 18px;
+  font-family: verdana;
+  color: #fff;
+
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* modal component */
+
+.modal{
+  width: 0%;
+  height: auto;
+  background-color: #f2f2f2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border-top: 20px groove #4286F5;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.modal.active{
+  opacity: 1;
+  z-index: 1;
+  width: 60%;
+
+}
+
+.modal .class-icon{
+  position: absolute;
+  right: -25px;
+  top: -45px;
+  font-size: 30px;
+  padding: 10px;
+  color: #EE534F;
+  cursor: pointer;
+}
+.modal .left-modal{
+  width: 30%;
+  height: 100%;
+}
+
+.modal .left-modal .img-box{
+  width: 100%;
+  height: 250px;
+
+  display: flex;
+  padding: 30px;
+  position: relative;
+}
+.modal .left-modal .img-box img{
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+.modal .left-modal .img-box input{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  top: 90px; 
+  opacity: 0;
+  cursor: pointer;
+
+}
+.modal .left-modal .img-box i{
+  padding: 10px;
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 90px;  
+  color: #4286F5;
+  
+}
+.modal .right-modal{
+  width: 70%;
+  height: 100%;
+  border-left: 5px groove #4286F5;
+  padding: 10px;
+}
+
+.modal .right-modal .input-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal .right-modal .input-box label{
+  font-size: 16px;
+  font-weight: bold;
+  font-size: sans-serif;
+  padding: 10px;
+}
+
+.modal .right-modal .input-box input{
+  width: 70%;
+  margin: 5px 0px;
+  border: none;
+  padding: 10px;
+  outline: none;
+  border-bottom: 3px solid #4286F5;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.modal .right-modal .input-box button{
+  width: 48%;
+  border: none;
+  outline: none;
+  background-color: #4286F5;
+  font-size: 18px;
+  font-family: verdana;
+  color: #fff;
+  padding: 5px;
+  margin: 10px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal .right-modal .input-box button:disabled{
+  filter: grayscale(80);
+ }
+
+ /* For changing input field color*/
+
+ input{
+  caret-color: black;
+ }

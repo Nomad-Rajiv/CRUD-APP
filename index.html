@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sttyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+  <title>Crud App</title>
+ 
+</head>
+<body>
+  
+  <div class="header">
+    <h5>Employee Database</h5>
+  </div>
+  <div class="uppper-btn-box">
+    <div class="left-box">
+        <button id="add-btn"><i class="fa fa-plus"></i> &nbsp; Add Employee </button>
+        <button style="background-color: #33B5E6;"><i class="fa fa-eraser"></i>&nbsp; Clear Filtering </button>
+    </div>
+    <div class="right-box">
+      <i class="fa fa-search"></i>
+      <input type="text" id="empId" placeholder="Enter Employee ID">
+      <button>Search</button>
+    </div>
+  </div>
+
+  <div class="table-box">
+    <table >
+      <tr >
+        <th>Sr No</th>
+        <th>Profile</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>E-Mail</th>
+        <th>Office Code</th>
+        <th>Job Title</th>
+        <th>Action</th>
+      </tr>
+      <tbody id="table_id">
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal">
+    <i class="fa fa-times-circle class-icon"></i>
+    <div class="left-modal">
+      <div class="img-box">
+        <img src="./image/avtar.png" alt="avatar" id="profile_pic">
+        <i class="fa fa-plus"></i>
+        <input type="file" id="upload_pic">
+      </div>
+    </div>
+    <div class="right-modal">
+      <form id="register_form">
+        <div class="input-box">
+          <label for="id">ID</label>
+          <input type="text" id="id" required>
+        </div>
+        <div class="input-box">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="input-box">
+          <label for="l-name">Last Name</label>
+          <input type="text" id="l-name" required>
+        </div>
+        <div class="input-box">
+          <label for="email">E-mail</label>
+          <input type="text" id="email" required>
+        </div>
+        <div class="input-box">
+          <label for="Office-Code">Office Code</label>
+          <input type="text" id="Office_Code" required>
+        </div>
+        <div class="input-box">
+          <label for="Job Title">Job Title</label>
+          <input type="text" id="Job_Title" required>
+        </div>
+        <div class="input-box">
+          <button id="registerBtn">Register</button>
+          <button id="update-btn" disabled="disabled" style="background-color: #EE534F">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+ 
+</body>
+</html>
