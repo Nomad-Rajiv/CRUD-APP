@@ -24,7 +24,6 @@
   /* Modal component */
 
   addBtn.addEventListener('click', function() {
-    updateBtn.disabled = true;
     modal.classList.add("active");
   });
 
@@ -124,7 +123,7 @@
               localStorage.setItem("userData",JSON.stringify(userData)); //update local storage
               getDataFromLocal(); // Refresh the table
 
-              swal("Poof! Employee Data has been deleted!", {
+              swal("Employee Data has been deleted!", {
                 icon: "success",
               });
             } else {
@@ -200,4 +199,34 @@ uploadPic.onchange = function() {
     }
   }
 };
+
+// Start Search Coading
+
+var searchBtn = document.getElementById("searchBtn");
+// var empId = document.getElementById("empId");
+
+searchBtn.addEventListener('click', function() {
+  searchFun();
+});
+
+empId.addEventListener('input', function() {
+  searchFun();
+});
+
+function searchFun() {
+  var tr = tableData.querySelectorAll("tr");
+  var filter = empId.value.toLowerCase(); // Correctly spelled toLowerCase()
+  
+  for(let i = 0; i < tr.length; i++) {
+    var td = tr[i].getElementsByTagName('td')[2]; // Adjusted tag name to lowercase 'td'
+    if (td) {
+      var id = td.innerHTML;
+      if(id.toLowerCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
 
