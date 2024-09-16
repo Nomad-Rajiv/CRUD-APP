@@ -245,3 +245,69 @@
  input{
   caret-color: black;
  }
+
+ /* Media Query for Mobile Screens */
+@media only screen and (max-width: 768px) {
+
+  .header h5 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .uppper-btn-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-box input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .right-box button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .table-box {
+    padding: 15px;
+  }
+
+  .table-box table tr th, 
+  .table-box table tr td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .modal.active {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal .class-icon {
+    top: -30px;
+    right: -20px;
+  }
+
+  .modal .left-modal,
+  .modal .right-modal {
+    width: 100%;
+  }
+
+  .modal .left-modal .img-box img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .modal .right-modal .input-box input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .modal .right-modal .input-box button {
+    width: 100%;
+    font-size: 14px;
+    margin: 5px 0px;
+  }
+}
